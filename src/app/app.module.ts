@@ -8,6 +8,7 @@ import {ReposModule} from "./pages/repos/repos.module";
 import {RouterModule} from "@angular/router";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpConfigInterceptor} from "./shared/interceptors/http-config.interceptor";
+import { DateAgoPipePipe } from './shared/pipes/date-ago-pipe.pipe';
 
 @NgModule({
   declarations: [

@@ -8,9 +8,9 @@
         <h5 class="card-title">{{info?.name}}</h5>
         <p class="card-text">{{info?.description}}</p>
         <p class="card-text">
-          <span class="badge bg-light text-dark">Stars: {{info?.stargazers_count}}</span>
-          <span class="badge bg-light text-dark">Issues: {{info?.open_issues_count}}</span>
-          <small class="text-muted">Submitted {{info?.updated_at}} ago by {{info?.owner?.login}}</small></p>
+          <span class="badge bg-light text-dark">Stars: {{info?.stargazers_count | conciseNumber}}</span>
+          <span class="badge bg-light text-dark">Issues: {{info?.open_issues_count | conciseNumber}}</span>
+          <small class="text-muted">Submitted {{info?.updated_at | dateAgo}}  by {{info?.owner?.login}}</small></p>
       </div>
     </div>
   </div>
