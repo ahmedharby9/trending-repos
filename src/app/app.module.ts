@@ -6,6 +6,8 @@ import {HeaderComponent} from './core/header/header.component';
 import {FooterComponent} from './core/footer/footer.component';
 import {ReposModule} from "./pages/repos/repos.module";
 import {RouterModule} from "@angular/router";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {HttpConfigInterceptor} from "./shared/interceptors/http-config.interceptor";
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import {RouterModule} from "@angular/router";
   imports: [
     BrowserModule,
     RouterModule,
+    HttpClientModule,
     ReposModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

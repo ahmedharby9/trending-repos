@@ -1,1 +1,5 @@
-<p>view-all-repos works!</p>
+<div class="container">
+<div class="row-cols-1" *ngFor="let repo of reposList">
+  <app-repo-card [info]="repo"></app-repo-card>
+</div>
+</div>

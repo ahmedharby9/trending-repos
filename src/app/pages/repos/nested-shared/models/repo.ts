@@ -5,5 +5,6 @@ export interface Repo {
   description?: string;
   stargazers_count?: number;
   open_issues_count?: number;
-  owner: Owner;
+  updated_at?: string;
+  owner?: Owner;
 }

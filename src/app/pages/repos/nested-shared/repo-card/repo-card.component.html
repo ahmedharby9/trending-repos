@@ -1,1 +1,17 @@
-<p>repo-card works!</p>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="info?.owner?.avatar_url" class="img-fluid rounded-start" [alt]="info?.owner?.login">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{info?.name}}</h5>
+        <p class="card-text">{{info?.description}}</p>
+        <p class="card-text">
+          <span class="badge bg-light text-dark">Stars: {{info?.stargazers_count}}</span>
+          <span class="badge bg-light text-dark">Issues: {{info?.open_issues_count}}</span>
+          <small class="text-muted">Submitted {{info?.updated_at}} ago by {{info?.owner?.login}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
